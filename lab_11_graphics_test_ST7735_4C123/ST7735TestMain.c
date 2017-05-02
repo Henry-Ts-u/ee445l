@@ -861,8 +861,10 @@ int main(void){//note LCD is 160x128
 	ST7735_InitR(INITR_REDTAB);
   //ST7735_DrawBitmap(59, 120, character, 20, 20);   // top left corner of the screen
   //ST7735_DrawBitmap(59, 74, character, 80, 80); // center of the screen
-	int x, y, dy, x2, y2, x3, y3;
-	x = 15; y = 25; dy = 1; x2 = 100; y2 = 80; x3 = 50; y3 = 120;
+	int x, y, dy, x2, y2, x3, y3, lvl, score, count;
+	x = 15; y = 25; dy = 1; x2 = 100; y2 = 80; x3 = 50; y3 = 120; lvl = 1; count = score = 0;
+	printf("lvl 1");
+	//printf("\ncurrent score %d", score);
 	while(1)
 	{
 		y = y + dy;
@@ -872,22 +874,38 @@ int main(void){//note LCD is 160x128
 			y = 0;
 			x = rand()%108;
 			ST7735_DrawBitmap(0, 140, black, 128, 20);
+			count = count + 1;
+			score = score + 1;
 		}
 		if(y2 > 140){
 			y2 = 0;
 			x2 = rand()%108;
 			ST7735_DrawBitmap(0, 140, black, 128, 20);
+			count = count + 1;
+			score = score + 1;
 		}
 		if(y3 > 140){
 			y3 = 0;
 			x3 = rand()%108;
 			ST7735_DrawBitmap(0, 140, black, 128, 20);
+			count = count + 1;
+			score = score + 1;
 		}
-
-			DelayWait10ms(10);
+		if(count > 10){
+			//dodged 10, go to next lvl
+			count = 0;
+			if(lvl < 10){//limit to 10 cause don't want negative delay
+				lvl = lvl + 1; 
+				ST7735_SetCursor(0, 0);
+				printf("lvl %d", lvl);
+			}
+		}
+		 DelayWait10ms(20-2*lvl);
 		 ST7735_DrawBitmap(x, y, green, 20, 20);
 		 ST7735_DrawBitmap(x2, y2, blue, 20, 20);
 		 ST7735_DrawBitmap(x3, y3, red, 20, 20);
+		 ST7735_SetCursor(0, 0);
+		 printf("lvl %d\n", lvl);
 	}
 }
 int mainx(void){  // main 2
