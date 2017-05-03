@@ -105,12 +105,12 @@ Section Cross References
     st7735testmain.o(i.drawthecolors) refers to st7735testmain.o(.data) for y
     st7735testmain.o(i.main) refers to pll.o(i.PLL_Init) for PLL_Init
     st7735testmain.o(i.main) refers to st7735.o(i.ST7735_InitR) for ST7735_InitR
+    st7735testmain.o(i.main) refers to st7735.o(i.ST7735_DrawBitmap) for ST7735_DrawBitmap
     st7735testmain.o(i.main) refers to printfa.o(i.__0printf) for __2printf
     st7735testmain.o(i.main) refers to rand.o(.text) for rand
-    st7735testmain.o(i.main) refers to st7735.o(i.ST7735_DrawBitmap) for ST7735_DrawBitmap
     st7735testmain.o(i.main) refers to st7735.o(i.ST7735_SetCursor) for ST7735_SetCursor
     st7735testmain.o(i.main) refers to st7735testmain.o(i.DelayWait10ms) for DelayWait10ms
-    st7735testmain.o(i.main) refers to st7735testmain.o(.constdata) for black
+    st7735testmain.o(i.main) refers to st7735testmain.o(.constdata) for character
     st7735testmain.o(i.main0) refers to pll.o(i.PLL_Init) for PLL_Init
     st7735testmain.o(i.main0) refers to st7735.o(i.Output_Init) for Output_Init
     st7735testmain.o(i.main0) refers to printfa.o(i.__0printf) for __2printf
@@ -569,22 +569,22 @@ Image Symbol Table
     commonInit                               0x000016e1   Thumb Code   340  st7735.o(i.commonInit)
     i.fputc                                  0x00001864   Section        0  st7735.o(i.fputc)
     i.main                                   0x00001874   Section        0  st7735testmain.o(i.main)
-    i.pushColor                              0x000019d4   Section        0  st7735.o(i.pushColor)
-    pushColor                                0x000019d5   Thumb Code    18  st7735.o(i.pushColor)
-    i.setAddrWindow                          0x000019e8   Section        0  st7735.o(i.setAddrWindow)
-    setAddrWindow                            0x000019e9   Thumb Code   106  st7735.o(i.setAddrWindow)
-    i.writecommand                           0x00001a5c   Section        0  st7735.o(i.writecommand)
-    writecommand                             0x00001a5d   Thumb Code    40  st7735.o(i.writecommand)
-    i.writedata                              0x00001a8c   Section        0  st7735.o(i.writedata)
-    writedata                                0x00001a8d   Thumb Code    24  st7735.o(i.writedata)
-    .constdata                               0x00001aac   Section     2018  st7735.o(.constdata)
-    Font                                     0x00001aac   Data        1275  st7735.o(.constdata)
-    Bcmd                                     0x00001fa7   Data         103  st7735.o(.constdata)
-    Rcmd1                                    0x0000200e   Data          59  st7735.o(.constdata)
-    Rcmd2green                               0x00002049   Data          13  st7735.o(.constdata)
-    Rcmd2red                                 0x00002056   Data          13  st7735.o(.constdata)
-    Rcmd3                                    0x00002063   Data          43  st7735.o(.constdata)
-    .constdata                               0x0000228e   Section    21988  st7735testmain.o(.constdata)
+    i.pushColor                              0x00001aa0   Section        0  st7735.o(i.pushColor)
+    pushColor                                0x00001aa1   Thumb Code    18  st7735.o(i.pushColor)
+    i.setAddrWindow                          0x00001ab4   Section        0  st7735.o(i.setAddrWindow)
+    setAddrWindow                            0x00001ab5   Thumb Code   106  st7735.o(i.setAddrWindow)
+    i.writecommand                           0x00001b28   Section        0  st7735.o(i.writecommand)
+    writecommand                             0x00001b29   Thumb Code    40  st7735.o(i.writecommand)
+    i.writedata                              0x00001b58   Section        0  st7735.o(i.writedata)
+    writedata                                0x00001b59   Thumb Code    24  st7735.o(i.writedata)
+    .constdata                               0x00001b78   Section     2018  st7735.o(.constdata)
+    Font                                     0x00001b78   Data        1275  st7735.o(.constdata)
+    Bcmd                                     0x00002073   Data         103  st7735.o(.constdata)
+    Rcmd1                                    0x000020da   Data          59  st7735.o(.constdata)
+    Rcmd2green                               0x00002115   Data          13  st7735.o(.constdata)
+    Rcmd2red                                 0x00002122   Data          13  st7735.o(.constdata)
+    Rcmd3                                    0x0000212f   Data          43  st7735.o(.constdata)
+    .constdata                               0x0000235a   Section    21988  st7735testmain.o(.constdata)
     .data                                    0x20000000   Section       44  st7735.o(.data)
     _width                                   0x2000000a   Data           2  st7735.o(.data)
     _height                                  0x2000000c   Data           2  st7735.o(.data)
@@ -828,19 +828,19 @@ Image Symbol Table
     __scatterload_null                       0x00000dd7   Thumb Code     2  handlers.o(i.__scatterload_null)
     __scatterload_zeroinit                   0x00000dd9   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
     fputc                                    0x00001865   Thumb Code    16  st7735.o(i.fputc)
-    main                                     0x00001875   Thumb Code   312  st7735testmain.o(i.main)
-    dBfs                                     0x0000208e   Data         512  st7735.o(.constdata)
-    Test                                     0x0000228e   Data           8  st7735testmain.o(.constdata)
-    Test2                                    0x00002296   Data          60  st7735testmain.o(.constdata)
-    Logo                                     0x000022d2   Data       12800  st7735testmain.o(.constdata)
-    character                                0x000054d2   Data         800  st7735testmain.o(.constdata)
-    block                                    0x000057f2   Data         800  st7735testmain.o(.constdata)
-    blue                                     0x00005b12   Data         800  st7735testmain.o(.constdata)
-    green                                    0x00005e32   Data         800  st7735testmain.o(.constdata)
-    red                                      0x00006152   Data         800  st7735testmain.o(.constdata)
-    black                                    0x00006472   Data        5120  st7735testmain.o(.constdata)
-    Region$$Table$$Base                      0x00007874   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00007894   Number         0  anon$$obj.o(Region$$Table)
+    main                                     0x00001875   Thumb Code   496  st7735testmain.o(i.main)
+    dBfs                                     0x0000215a   Data         512  st7735.o(.constdata)
+    Test                                     0x0000235a   Data           8  st7735testmain.o(.constdata)
+    Test2                                    0x00002362   Data          60  st7735testmain.o(.constdata)
+    Logo                                     0x0000239e   Data       12800  st7735testmain.o(.constdata)
+    character                                0x0000559e   Data         800  st7735testmain.o(.constdata)
+    block                                    0x000058be   Data         800  st7735testmain.o(.constdata)
+    blue                                     0x00005bde   Data         800  st7735testmain.o(.constdata)
+    green                                    0x00005efe   Data         800  st7735testmain.o(.constdata)
+    red                                      0x0000621e   Data         800  st7735testmain.o(.constdata)
+    black                                    0x0000653e   Data        5120  st7735testmain.o(.constdata)
+    Region$$Table$$Base                      0x00007940   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00007960   Number         0  anon$$obj.o(Region$$Table)
     StX                                      0x20000000   Data           4  st7735.o(.data)
     StY                                      0x20000004   Data           4  st7735.o(.data)
     StTextColor                              0x20000008   Data           2  st7735.o(.data)
@@ -861,9 +861,9 @@ Memory Map of the image
 
   Image Entry point : 0x0000026d
 
-  Load Region LR_1 (Base: 0x00000000, Size: 0x000078c8, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x00000000, Size: 0x00007994, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Base: 0x00000000, Size: 0x00007894, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Base: 0x00000000, Size: 0x00007960, Max: 0xffffffff, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -917,16 +917,16 @@ Memory Map of the image
     0x0000168a   0x00000056   Code   RO           68    i.commandList       st7735.o
     0x000016e0   0x00000184   Code   RO           69    i.commonInit        st7735.o
     0x00001864   0x00000010   Code   RO           73    i.fputc             st7735.o
-    0x00001874   0x00000160   Code   RO          314    i.main              st7735testmain.o
-    0x000019d4   0x00000012   Code   RO           74    i.pushColor         st7735.o
-    0x000019e6   0x00000002   PAD
-    0x000019e8   0x00000074   Code   RO           75    i.setAddrWindow     st7735.o
-    0x00001a5c   0x00000030   Code   RO           76    i.writecommand      st7735.o
-    0x00001a8c   0x00000020   Code   RO           77    i.writedata         st7735.o
-    0x00001aac   0x000007e2   Data   RO           79    .constdata          st7735.o
-    0x0000228e   0x000055e4   Data   RO          323    .constdata          st7735testmain.o
-    0x00007872   0x00000002   PAD
-    0x00007874   0x00000020   Data   RO          709    Region$$Table       anon$$obj.o
+    0x00001874   0x0000022c   Code   RO          314    i.main              st7735testmain.o
+    0x00001aa0   0x00000012   Code   RO           74    i.pushColor         st7735.o
+    0x00001ab2   0x00000002   PAD
+    0x00001ab4   0x00000074   Code   RO           75    i.setAddrWindow     st7735.o
+    0x00001b28   0x00000030   Code   RO           76    i.writecommand      st7735.o
+    0x00001b58   0x00000020   Code   RO           77    i.writedata         st7735.o
+    0x00001b78   0x000007e2   Data   RO           79    .constdata          st7735.o
+    0x0000235a   0x000055e4   Data   RO          323    .constdata          st7735testmain.o
+    0x0000793e   0x00000002   PAD
+    0x00007940   0x00000020   Data   RO          709    Region$$Table       anon$$obj.o
 
 
     Execution Region ER_RW (Base: 0x20000000, Size: 0x00000034, Max: 0xffffffff, ABSOLUTE)
@@ -955,11 +955,11 @@ Image component sizes
 
        124          6          0          0          0       4695   pll.o
       2002        198       2018         44          0      15659   st7735.o
-       384         40      21988          0          0       2322   st7735testmain.o
+       588         60      21988          0          0       2514   st7735testmain.o
        644        620          0          0       1024        764   startup.o
 
     ----------------------------------------------------------------------
-      3158        864      24040         44       1024      23440   Object Totals
+      3362        884      24040         44       1024      23632   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          4          0          2          0          0          0   (incl. Padding)
 
@@ -1014,15 +1014,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      6828        982      24040         52       1028      23352   Grand Totals
-      6828        982      24040         52       1028      23352   ELF Image Totals
-      6828        982      24040         52          0          0   ROM Totals
+      7032       1002      24040         52       1028      23544   Grand Totals
+      7032       1002      24040         52       1028      23544   ELF Image Totals
+      7032       1002      24040         52          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                30868 (  30.14kB)
+    Total RO  Size (Code + RO Data)                31072 (  30.34kB)
     Total RW  Size (RW Data + ZI Data)              1080 (   1.05kB)
-    Total ROM Size (Code + RO Data + RW Data)      30920 (  30.20kB)
+    Total ROM Size (Code + RO Data + RW Data)      31124 (  30.39kB)
 
 ==============================================================================
 
