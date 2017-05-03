@@ -859,8 +859,7 @@ const uint16_t black[] = {
 int main(void){//note LCD is 160x128
 	PLL_Init(Bus80MHz); 
 	ST7735_InitR(INITR_REDTAB);
-  ST7735_DrawBitmap(64, 150, character, 20, 20);   // top left corner of the screen
-  //ST7735_DrawBitmap(59, 74, character, 80, 80); // center of the screen
+  ST7735_DrawBitmap(64, 150, character, 20, 20);  
 	int x, y, dy, x2, y2, x3, y3, lvl, score, count, charx, lives;
 	x = 15; y = 25; dy = 1; x2 = 100; y2 = 80; x3 = 50; y3 = 120; lvl = 1; count = score = 0; lives = 3;
 	charx = 64; 
